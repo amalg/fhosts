@@ -218,6 +218,15 @@ browser.tabs.onRemoved.addListener((tabId) => {
   }
 });
 
+// Inherit enabled state when a new tab is opened from an enabled tab
+browser.tabs.onCreated.addListener((tab) => {
+  if (tab.openerTabId !== undefined && enabledTabs.has(tab.openerTabId)) {
+    console.log(`fhosts: Tab ${tab.id} inheriting enabled state from opener tab ${tab.openerTabId}`);
+    enabledTabs.add(tab.id);
+    updateTabIcon(tab.id);
+  }
+});
+
 // Re-apply icon state when tabs reload (Firefox resets to default on navigation)
 browser.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   if (changeInfo.status === 'complete') {
