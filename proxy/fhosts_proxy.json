@@ -1,0 +1,7 @@
+{
+  "name": "fhosts_proxy",
+  "description": "fhosts local proxy for DNS override",
+  "path": "C:\\Users\\amal\\Documents\\Repos\\fhosts\\proxy\\fhosts-proxy.exe",
+  "type": "stdio",
+  "allowed_extensions": ["fhosts@local"]
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fhosts</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-row">
+        <div class="header-left">
+          <h1><a href="https://github.com/amalg/fhosts" id="titleLink">fhosts</a></h1>
+          <p class="subtitle">Enable per-tab to apply overrides.</p>
+        </div>
+        <div class="tab-status">
+          <span id="tabStatusText">This tab: OFF</span>
+          <label class="toggle-switch">
+            <input type="checkbox" id="tabToggle">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+      <div class="proxy-status" id="proxyStatus" style="display: none;">
+        <p>Proxy helper not installed</p>
+        <a href="https://github.com/amalg/fhosts/releases" class="btn btn-secondary" id="installLink">Download Installer</a>
+      </div>
+    </header>
+
+    <div class="tab-info" id="tabInfo">
+      <span id="enabledTabCount">0 tabs active</span>
+    </div>
+
+    <section class="add-mapping">
+      <h2>Host Overrides</h2>
+      <div class="form-row">
+        <input type="text" id="hostnameInput" placeholder="example.com">
+      </div>
+      <div class="form-row">
+        <input type="text" id="ipInput" placeholder="127.0.0.1">
+      </div>
+      <button id="addBtn" class="btn btn-primary">Add Mapping</button>
+    </section>
+
+    <section class="mappings-list">
+      <h2>Configured Mappings</h2>
+      <div id="mappingsContainer">
+        <p class="empty-state">No host overrides configured</p>
+      </div>
+    </section>
+
+    <footer>
+      <a href="https://github.com/amalg/fhosts" class="footer-link">https://github.com/amalg/fhosts</a>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
