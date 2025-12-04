@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "fhosts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Override DNS resolution for selected domains - a per-browser hosts file for local development",
   "browser_specific_settings": {
     "gecko": {
